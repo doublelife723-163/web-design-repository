@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用类选择器画三个盒子</title>
+    <style>
+        /* 可以把一些标签元素相同的样式(共同的部分)放到一个类里面 */
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        /* 可以调用这些公共的类 然后再调用自己独有的类 */
+        .red {
+            
+            /* 背景颜色 */
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="red box"></div>
+    <div class="green box"></div>
+    <div class="red box"></div>
+</body>
+</html>
