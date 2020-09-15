@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 我需要把ol里面的小li选出来 改为pink颜色 */
+        ol li {
+            color: pink;
+        }
+
+        /* 后代选择器格式 元素1 元素2 {样式声明} */
+        /* 元素1是父级 元素2是子级 最终选择的是元素2 */
+        /* 元素2 可以是儿子 也可以是孙子等 只要是元素1的后代即可 */
+        ul li a {
+            color: salmon;
+        }
+
+        .nav li a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">我是ul 的孙子</a></li>
+    </ul>
+    <ol>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+    </ol>
+    <ol class="nav">
+        <!-- 这里要ol中下面的小a变成绿色 而上面的小a不发生变化  -->
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+    </ol>
+</body>
+
+</html>
