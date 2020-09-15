@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css字体属性之复合属性</title>
+    <style>
+        div {
+            /* font-size: 16px;
+            font-weight: 700;
+            font-style: italic;
+            font-family: "Microsoft YaHei"; */
+            /* 复合属性：简写的方式 对顺序有要求 各属性用空格隔开*/
+            /* font: font-style font-weight font-size/line-height font-family; */
+            font: italic 700 16px/20px "Microsoft YaHei";
+            /* 顺序：斜 粗 大小/行距 字体 省略版本：大小 字体 */   
+            color :#e71232;
+        }
+    </style> 
+</head>
+<body>
+    <div>黑马程序员pink老师前端入门视频教程 HTML5+CSS3</div>
+</body>
+</html>
