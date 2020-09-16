@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css权重注意点</title>
+    <!-- 继承的权重为0 如果该元素没有直接被选中 不管父元素权重有多高 子元素得到的权重都是0 -->
+    <style>
+        #father {
+            /* 哪怕这里是最高优先级!important也没有用 */
+            color: red !important;
+        }
+
+        /* 虽然这里#father是id选择器 p是元素选择器 但是这里的color：red是继承下去的 所以优先级是最低的0 */
+        p {
+            color: pink;
+        }
+
+        body {
+            color: white;
+        }
+
+        /* a链接 浏览器默认制定了一个样式 蓝色的 有下划线的 相当于 a {color: white;} 元素选择器 */
+        a {
+            /* 所以a链接 需要单独设置样式 这里的样式 覆盖了默认的样式 */
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="father">
+        <p>
+            你笑起来很好看
+        </p>
+    </div>
+    <a href="#">我是单独的样式</a>
+</body>
+
+</html>
