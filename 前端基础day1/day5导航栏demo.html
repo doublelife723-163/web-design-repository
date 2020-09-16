@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五彩导航栏</title>
+    <style>
+        .nav a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            width: 120px;
+            height: 58px;
+            background-color: skyblue;
+            line-height: 48px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* 这里使用的是后代选择器 */
+        .nav .bg1 {
+            /* background-image: url(images/bg1.png);
+            background-repeat: no-repeat; */
+            /* 两种写法都可以 */
+            background: url(images/bg1.png) no-repeat;
+        }
+
+        .nav .bg2 {
+            background-image: url(images/bg2.png);
+            background-repeat: no-repeat;
+        }
+
+        .nav .bg3 {
+            background-image: url(images/bg3.png);
+            background-repeat: no-repeat;
+        }
+
+        .nav .bg4 {
+            background-image: url(images/bg4.png);
+            background-repeat: no-repeat;
+        }
+
+        /* 平时都是a:hover 但是这里需要 每一个a hover的时候背景图都不一样 所以用.bg1/2/3/4来代替a  这里要求 类名一定是标签a的*/
+        .nav .bg1:hover {
+            background-image: url(images/bg5.png);
+            /* background-repeat: no-repeat; */
+            /* 因为背景图之前就是不平铺 所以当hover的时候 直接改变background-image就行了 */
+        }
+
+        .nav .bg2:hover {
+            background-image: url(images/bg6.png);
+        }
+
+        .nav .bg3:hover {
+            background-image: url(images/bg7.png);
+        }
+
+        .nav .bg4:hover {
+            background-image: url(images/bg8.png);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <!-- 这里按住shift+alt+鼠标左键 竖直下拉 可以同时输入五个# -->
+        <a href="#" class="bg1">五彩导航</a>
+        <a href="#" class="bg2">五彩导航</a>
+        <a href="#" class="bg3">五彩导航</a>
+        <a href="#" class="bg4">五彩导航</a>
+    </div>
+</body>
+
+</html>
