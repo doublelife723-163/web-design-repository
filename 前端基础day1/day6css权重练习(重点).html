@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重练习(重点)</title>
+    <style>
+        /* 这里是复合选择器 类选择器 + 元素选择器 = 0,0,1,1 权重是比下面的类选择器高的 所以color属性 覆盖了 */
+        .nav li {
+            color: red;
+        }
+
+        /* li {
+            color: blue;
+        } */
+        /* 类选择器的权重为 0,0,1,0 */
+        .green {
+            color: green;
+            font-weight: 900;
+        }
+
+        /* 当加上.nav 后 则不再是单一的类选择器了 而变成了 2个类选择器叠加的 复合选择器 权重为0,0,2,0 是高于.nav li 的0,0,1,1的 */
+        .nav .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="green">人生四大悲</li>
+        <li>家里没宽带</li>
+        <li>网速不够快</li>
+        <li>手机没流量</li>
+        <li>学校没wifi</li>
+    </ul>
+</body>
+
+</html>
